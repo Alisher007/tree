@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load tree_tags %}
+{% load static %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Tree</h1>  
+                {%for sub in object %}
+                <div>{{sub}}</div>
+                {%tree_loop sub %}
+                {% endfor%}   
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

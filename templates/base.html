@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tree</title>
+</head>
+<style>
+
+</style>
+<body>
+{% include 'navbar.html' %}
+{% include 'messages.html' %}
+<div style="margin-top: 6%">
+    {% block content %}
+    {% endblock %}
+    
+</div>
+
+<script>
+
+//closes the modal, after certain time
+const message_id = document.getElementById("message_id");
+setTimeout(function(){
+    
+    if(message_id != null ){
+        message_id.style.display = "none";
+    }
+}, 5000);
+
+window.onclick = function(event) {
+  if (event.target == message_id) {
+      message_id.style.display = "none";
+    }
+}
+
+
+</script>
+</body>
+</html>

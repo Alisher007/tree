@@ -1,0 +1,5 @@
+<ul>
+    {%for ob in object%}
+    <li><a href="{{ ob.get_absolute_url }}">{{ob}}</a></li>
+    {%endfor%}
+</ul>
