@@ -8,9 +8,9 @@
         <div class="row">
             <div class="col">
                 <h1>Tree</h1>  
-                {%for sub in object %}
-                <div>{{sub}}</div>
-                {%tree_loop sub %}
+                {%for main_menu in object %}
+                <div>{{main_menu}}</div>
+                {%draw_menu main_menu %}
                 {% endfor%}   
             </div>
         </div>
